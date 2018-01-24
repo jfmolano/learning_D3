@@ -1,4 +1,4 @@
-d3.select("body")
+/*d3.select("body")
 	.append("svg")
 	.attr("width", 50)
 	.attr("height", 50)
@@ -6,7 +6,10 @@ d3.select("body")
 	.attr("cx", 25)
 	.attr("cy", 25)
 	.attr("r", 25)
-	.style("fill", "purple");
+	.style("fill", "purple");*/
+
+/*d3.select("body").transition()
+    .style("background-color", "red");*/
 
 /*d3.selectAll("p").style("color", function() {
   return "hsl(" + Math.random() * 360 + ",100%,50%)";
@@ -23,6 +26,7 @@ d3.select("body")
   .text(function(d) { return "I’m number " + d + "!"; });*/
 
   // Update…
+/*
 var p = d3.select("body")
   .selectAll("p")
   .data([4, 8, 15, 16, 23, 42])
@@ -33,4 +37,11 @@ p.enter().append("p")
     .text(function(d) { return d; });
 
 // Exit…
-p.exit().remove();
+p.exit().remove();*/
+
+d3.selectAll("circle")
+	.data([80,15])
+	.transition()
+    .duration(750)
+    .delay(function(d, i) { return i * 10; })
+    .attr("r", function(d) { return d; });
